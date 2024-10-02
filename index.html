@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jogo da Velha</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <h1>Texto</h1>
+    <h1>Jogo da Velha</h1>
 
     <div id="entrada-nomes" class="entrada-nomes">
         <input type="text" id="jogador1" placeholder="Nome do Jogador 1">
@@ -15,6 +16,32 @@
         <button onclick="iniciarJogo()">Iniciar Jogo</button>
     </div>
 
+    <div class="jogo-container oculto" id="jogo-container">
+        <div class="placar">
+            <p id="placar-jogador1">Jogador 1 (X): 0</p>
+            <p id="placar-jogador2">Jogador 2 (O): 0</p>
+        </div>
+
+        <p id="vez-jogador">Vez de: Jogador 1 (X)</p>
+
+        <div class="tabuleiro" id="tabuleiro">
+            <div class="celula" data-index="0"></div>
+            <div class="celula" data-index="1"></div>
+            <div class="celula" data-index="2"></div>
+            <div class="celula" data-index="3"></div>
+            <div class="celula" data-index="4"></div>
+            <div class="celula" data-index="5"></div>
+            <div class="celula" data-index="6"></div>
+            <div class="celula" data-index="7"></div>
+            <div class="celula" data-index="8"></div>
+        </div>
+
+        <p id="mensagem-resultado"></p>
+        <button class="botao-reiniciar" onclick="reiniciarPartida()">Reiniciar Partida</button>
+        <button class="botao-reiniciar" onclick="reiniciarJogo()">Reiniciar Jogo (Novos Jogadores)</button>
+    </div>
+
     <script src="script.js"></script>
+
 </body>
 </html>
